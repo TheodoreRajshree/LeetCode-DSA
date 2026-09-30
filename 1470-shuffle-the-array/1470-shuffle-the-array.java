@@ -1,16 +1,15 @@
-class Solution {
-
-    public int[] shuffle(int[] nums, int n) {
-
-        int[] ans = new int[2 * n];
-
-        for (int i = 0; i < n; i++) {
-
-            ans[2 * i] = nums[i];
-
-            ans[2 * i + 1] = nums[i + n];
+public class Solution{
+    
+        public int[] shuffle(int[] num, int n){
+        int[]arr=new int[num.length];
+        for(int i=0;i<num.length;i++){
+        if(i%2==0){
+            arr[i]=num[i/2];
         }
-
-        return ans;
+        else{
+            arr[i]=num[n+i/2];
+        }
+        }
+        return arr;
+        }
     }
-}
